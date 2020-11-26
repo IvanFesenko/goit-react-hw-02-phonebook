@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import styles from './ContactForm.module.css';
 
 class ContactForm extends Component {
-  static defaultProps = {
-    name: '',
-    number: '',
-  };
-
   constructor(props) {
     super(props);
-    this.state = { ...this.props };
+    this.state = {
+      name: '',
+      number: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event, type) {
@@ -19,7 +19,11 @@ class ContactForm extends Component {
     });
   }
 
-  handleSubmit(event) {}
+  handleSubmit(event) {
+    event.preventDefault();
+    const { name, number } = this.state;
+    this.props.onAddContact(name, number);
+  }
 
   render() {
     return (
@@ -39,7 +43,7 @@ class ContactForm extends Component {
           Number
           <input
             id="formNumber"
-            type="number"
+            type="tel"
             name="number"
             value={this.state.number}
             required
