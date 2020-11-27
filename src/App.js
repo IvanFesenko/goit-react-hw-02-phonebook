@@ -32,13 +32,21 @@ class App extends Component {
   }
 
   addContact(name, number) {
+    if (!name.trim()) {
+      alert(`Wrong name`);
+      return;
+    }
+    if (!name.trim()) {
+      alert(`Wrong name`);
+      return;
+    }
     if (this.nameAvailable(name)) {
       const { contacts } = this.state;
       const newContact = { id: uid(), name, number };
       this.setState({
         contacts: contacts.concat([newContact]).sort((a, b) => {
-          if (a.name < b.name) return -1;
-          if (a.name < b.name) return 1;
+          if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+          if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
           return 1;
         }),
       });
