@@ -10,28 +10,7 @@ import Filter from './components/Filter/Filter';
 
 class App extends Component {
   static defaultProps = {
-    contacts: [
-      {
-        id: 'a866a652-a778-430b-ac26-097c344f60bb',
-        name: 'Rosie Simpson',
-        number: '459-12-56',
-      },
-      {
-        id: '652c9ba6-6414-4c7b-b4d7-f21cb252ebaa',
-        name: 'Hermione Kline',
-        number: '443-89-12',
-      },
-      {
-        id: '401c6a70-fd2a-4517-a1f0-c9d6750606cc',
-        name: 'Eden Clements',
-        number: '645-17-79',
-      },
-      {
-        id: '7f5ebc82-d7f0-49cd-8707-a004ff49c237',
-        name: 'Annie Copeland',
-        number: '227-91-26',
-      },
-    ],
+    contacts: [],
     filter: '',
   };
 
