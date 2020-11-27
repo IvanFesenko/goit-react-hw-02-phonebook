@@ -1,9 +1,10 @@
 import ContactListItem from './ContactListItem';
+import s from './ContactList.module.scss';
 
 function ContactList({ contacts, onDeleteHandler }) {
   return (
     contacts.length > 0 && (
-      <ul>
+      <ul className={s.list}>
         {contacts.map(({ id, name, number }) => {
           return (
             <ContactListItem

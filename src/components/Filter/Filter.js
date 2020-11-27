@@ -7,6 +7,7 @@ function Filter({ filter, onChangeFilter = () => {} }) {
         Find Contacts by name
         <input
           type="text"
+          className={styles.input}
           value={filter}
           onChange={e => onChangeFilter(e.target.value)}
         />
