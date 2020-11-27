@@ -36,8 +36,8 @@ class App extends Component {
       alert(`Wrong name`);
       return;
     }
-    if (!name.trim()) {
-      alert(`Wrong name`);
+    if (!number.trim()) {
+      alert(`Wrong number`);
       return;
     }
     if (this.nameAvailable(name)) {
